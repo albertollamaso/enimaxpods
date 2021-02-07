@@ -12,10 +12,8 @@ This client that works as a deployment in Kubernetes check the amount of pods of
 ### How to use it?
 
 Within your kubernetes cluster execute below command to deploy to default namespace:
+
 `kubectl apply -f kubernetes/ -n default`
-
-
-### FAQS
 
 
 ### todo: 
