@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eni-max-pods
+  labels:
+    app: eni-max-pods
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eni-max-pods
+  template:
+    metadata:
+      labels:
+        app: eni-max-pods
+    spec:
+      serviceAccountName: nodewatcher
+      containers:
+      - name: master
+        image: albertollamas8131/enimaxpods
+        imagePullPolicy: Always
